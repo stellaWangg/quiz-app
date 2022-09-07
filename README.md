@@ -1,4 +1,7 @@
-# Getting Started with Create React App
+FINAL RESULT:
+<img width="1280" alt="截屏2022-09-07 下午11 27 41" src="https://user-images.githubusercontent.com/91721862/188994842-750bb253-21f3-4f73-8e5b-e0466efb3e91.png">
+<img width="1280" alt="截屏2022-09-07 下午11 27 53" src="https://user-images.githubusercontent.com/91721862/188994853-06318d87-0100-4a07-b040-f7b21a788336.png">
+<img width="1280" alt="截屏2022-09-07 下午11 28 06" src="https://user-images.githubusercontent.com/91721862/188994860-ca846bb8-a95f-4ace-bcee-e279e9966ddb.png">
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
