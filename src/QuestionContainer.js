@@ -36,7 +36,6 @@ const QuestionContainer = () => {
       <button className="next-btn" onClick={nextQueFunc}>
         Next Question
       </button>
-      {isModalOpen && <Modal />}
     </section>
   );
 };

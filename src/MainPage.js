@@ -2,7 +2,7 @@ import React from "react";
 import { useGlobalContext } from "./context";
 
 const MainPage = () => {
-  const { handleChange, handleSubmit, quiz } = useGlobalContext();
+  const { handleChange, handleSubmit, quiz, error } = useGlobalContext();
   return (
     <section className="question">
       <form className="question-form">
@@ -34,7 +34,7 @@ const MainPage = () => {
           >
             <option value="easy">easy</option>
             <option value="medium">medium</option>
-            <option value="difficult">difficult</option>
+            <option value="hard">hard</option>
           </select>
         </div>
         {/* number of Qs */}
@@ -42,7 +42,8 @@ const MainPage = () => {
           <label htmlFor="amount">choose amount of Qs</label>
           <input
             type="number"
-            name="category"
+            name="amount"
+            id="amount"
             className="form-input"
             onChange={handleChange}
             value={quiz.amount}
@@ -50,6 +51,9 @@ const MainPage = () => {
             max={50}
           />
         </div>
+        {error && (
+          <p className="error">can't generate questions, plz try again</p>
+        )}
         <button className="submit-btn" type="submit" onClick={handleSubmit}>
           Generate Questions
         </button>

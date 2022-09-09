@@ -10,7 +10,7 @@ const numForCtgr = {
 };
 
 const AppProvider = ({ children }) => {
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [correct, setCorrect] = useState(0);
@@ -26,10 +26,12 @@ const AppProvider = ({ children }) => {
   const fetchQuestions = async (url) => {
     setLoading(true);
     setIsModalOpen(false);
+    setStartForm(true);
     const resp = await axios(url).catch((error) => console.log(error));
     console.log(resp);
     if (resp) {
       const data = resp.data.results;
+      console.log(data);
       if (data.length > 0) {
         setQuestions(data);
         setLoading(false);
@@ -39,6 +41,8 @@ const AppProvider = ({ children }) => {
         setStartForm(true);
         setError(true);
       }
+    } else {
+      setStartForm(true);
     }
   };
   const nextQueFunc = () => {

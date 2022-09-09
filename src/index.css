@@ -55,7 +55,7 @@ body {
   align-items: center;
   font-size: large;
   font-weight: 500;
-  margin-top: 50px;
+  margin-top: 2rem;
 }
 .question-form {
   display: flex;
@@ -97,7 +97,7 @@ body {
 /* for Question Form */
 main {
   justify-content: center;
-  display: flex;
+  display: grid;
   align-items: center;
   margin: auto;
 }
@@ -136,6 +136,7 @@ main {
 .next-btn {
   transition: var(--transition);
   border-radius: var(--border-radius);
+  width: auto;
 }
 .next-btn:hover {
   background-color: #f4a261;
@@ -145,32 +146,35 @@ main {
   color: aliceblue;
   background-color: var(--btn-clr);
 }
+@media screen and (min-width: 576px) {
+}
 /* Modal */
 .isOpen {
   opacity: 1;
   z-index: 999;
 }
 .modal-container {
-  position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background: var(--bg-clr-2);
-  display: flex;
+  display: grid;
   align-items: center;
   justify-content: center;
   opacity: 1;
   transition: var(--transition);
   z-index: 1;
+  position: fixed;
 }
 .modal-content {
   background: rgba(15, 114, 11, 0.94);
-  width: 50vw;
+  width: 40vw;
   max-width: 90vw;
-  padding: 3rem;
+  padding: 2rem;
   border-radius: var(--border-radius);
   text-align: center;
-  position: absolute;
+  /* position: block; */
   color: var(--font-cl-1);
 }
 .modal-content p {
@@ -184,10 +188,17 @@ main {
   font-weight: 800;
   border: none;
   border-radius: var(--border-radius);
-  width: 20vw;
+  width: 30vw;
   height: 10vh;
 }
 
 .close-btn:hover {
   color: white;
+}
+.error {
+  text-transform: capitalize;
+  color: rgb(176, 45, 45);
+  position: relative;
+  font-size: medium;
+  margin: 0 auto;
 }

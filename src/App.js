@@ -4,10 +4,8 @@ import QuestionContainer from "./QuestionContainer";
 import MainPage from "./MainPage";
 import Loading from "./Loading";
 import Modal from "./Modal";
-
 function App() {
-  const { loading, error, startForm, isModalOpen } = useGlobalContext();
-
+  const { loading, startForm, isModalOpen } = useGlobalContext();
   if (startForm) {
     return <MainPage />;
   }
@@ -17,6 +15,7 @@ function App() {
 
   return (
     <main>
+      {isModalOpen && <Modal />}
       <QuestionContainer />
     </main>
   );
